@@ -1,4 +1,4 @@
-##Documentation for the Datamodel
+## Documentation for the Datamodel
 
 > Converts a Database into a static html page
 
