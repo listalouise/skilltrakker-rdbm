@@ -21,3 +21,13 @@ Example:
 ```bash
 java -jar schemaspy-6.1.0.jar -t mysql -dp /usr/share/java/mysql-connector-java-8.0.21.jar -db Skilltrakker_API -host localhost -port 3306 -s Skilltrakker_API -u alexskull -p 20516686 -o /home/alexskull/htdocs/datamodelskilltrakker.local/
 ```
+After that you gonna get an HTML site with the full Documentation.
+
+## Recomendations
+
+If you made changes into the DB and you wanna regenerate the HTML, delete all the files only leaving:
+  * API_Skilltrakker_fk.sql
+  * GenerateModel.txt
+  * schemaspy-6.1.0.jar
+  * Readme.md
+That way the bloat is avoided, in case that some structures aren't needed anymore.
