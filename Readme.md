@@ -4,7 +4,7 @@
 
 **Steps to Generate the Documentation from the database:**
 
-If you dont have the database, please use the script "API_Skilltrakker_fk.sql"
+If you dont have the database, please use the script [API_Skilltrakker_fk.sql](https://github.com/listalouise/skilltrakker-rdbm/blob/master/API_Skilltrakker_fk.sql)
 
 * Download schemaspy-6.1.0.jar
 
