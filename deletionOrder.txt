@@ -1,0 +1,16 @@
+completed_daily_challenges
+completed_normal_challenges
+skill_has_levels
+gymnasts_classes
+gymnast_has_skills
+timeline
+normal_challenges
+skills
+daily_challenges
+gymnasts
+users
+gyms
+levels
+events
+challenges
+classes
