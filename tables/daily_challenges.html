@@ -125,7 +125,7 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="completed_daily_challenges.[daily_challenges_classes_id, daily_challenges_challenges_id, daily_challenges_date] references daily_challenges.[classes_id, challenges_id, date_challenge] via fk_daily_challenge_is_completed_by_gymnast"><a href='completed_daily_challenges.html'>completed_daily_challenges</a><span class='relatedKey'>.daily_challenges_classes_id</span></td>
+                                                <td title="completed_daily_challenges.[daily_challenges_classes_id, daily_challenges_challenges_id, daily_challenges_date] references daily_challenges.[classes_id, challenges_id, date] via fk_daily_challenge_is_completed_by_gymnast"><a href='completed_daily_challenges.html'>completed_daily_challenges</a><span class='relatedKey'>.daily_challenges_classes_id</span></td>
                                                 <td class="constraint detail">fk_daily_challenge_is_completed_by_gymnast<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
@@ -150,7 +150,7 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="completed_daily_challenges.[daily_challenges_classes_id, daily_challenges_challenges_id, daily_challenges_date] references daily_challenges.[classes_id, challenges_id, date_challenge] via fk_daily_challenge_is_completed_by_gymnast"><a href='completed_daily_challenges.html'>completed_daily_challenges</a><span class='relatedKey'>.daily_challenges_challenges_id</span></td>
+                                                <td title="completed_daily_challenges.[daily_challenges_classes_id, daily_challenges_challenges_id, daily_challenges_date] references daily_challenges.[classes_id, challenges_id, date] via fk_daily_challenge_is_completed_by_gymnast"><a href='completed_daily_challenges.html'>completed_daily_challenges</a><span class='relatedKey'>.daily_challenges_challenges_id</span></td>
                                                 <td class="constraint detail">fk_daily_challenge_is_completed_by_gymnast<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
@@ -166,7 +166,7 @@
                                     <td><p>Challenge&rsquo; code</p></td>
                                 </tr>
                                 <tr>
-                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="date_challenge">date_challenge</span></td>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="date">date</span></td>
                                     <td>DATE</td>
                                     <td>10</td>
                                     <td title=''></td>
@@ -175,7 +175,7 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="completed_daily_challenges.[daily_challenges_classes_id, daily_challenges_challenges_id, daily_challenges_date] references daily_challenges.[classes_id, challenges_id, date_challenge] via fk_daily_challenge_is_completed_by_gymnast"><a href='completed_daily_challenges.html'>completed_daily_challenges</a><span class='relatedKey'>.daily_challenges_date</span></td>
+                                                <td title="completed_daily_challenges.[daily_challenges_classes_id, daily_challenges_challenges_id, daily_challenges_date] references daily_challenges.[classes_id, challenges_id, date] via fk_daily_challenge_is_completed_by_gymnast"><a href='completed_daily_challenges.html'>completed_daily_challenges</a><span class='relatedKey'>.daily_challenges_date</span></td>
                                                 <td class="constraint detail">fk_daily_challenge_is_completed_by_gymnast<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
@@ -214,7 +214,7 @@
                                     <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> PRIMARY</td>
                                     <td>Primary key</td>
                                     <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
-                                    <td>classes_id + challenges_id + date_challenge</td>
+                                    <td>classes_id + challenges_id + date</td>
                                 </tr>
                                 <tr>
                                     <td title='Indexed'>fk_challenge_has_classes_idx</td>

@@ -285,7 +285,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="users_id">users_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="gyms_has_users_gyms_id">gyms_has_users_gyms_id</span></td>
                                     <td>INT</td>
                                     <td>10</td>
                                     <td title=''></td>
@@ -298,12 +298,33 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="gymnasts.users_id references users.id via fk_gymnasts_users_idx"><a href='users.html'>users</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">fk_gymnasts_users_idx<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="gymnasts.[gyms_has_users_gyms_id, gyms_has_users_users_id] references gyms_has_users.[gyms_id, users_id] via fk_gymnasts_gyms_has_users1"><a href='gyms_has_users.html'>gyms_has_users</a><span class='relatedKey'>.gyms_id</span></td>
+                                                <td class="constraint detail">fk_gymnasts_gyms_has_users1<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
-                                    <td><p>user&rsquo; id which the gymnast belongs</p></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="gyms_has_users_users_id">gyms_has_users_users_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="gymnasts.[gyms_has_users_gyms_id, gyms_has_users_users_id] references gyms_has_users.[gyms_id, users_id] via fk_gymnasts_gyms_has_users1"><a href='gyms_has_users.html'>gyms_has_users</a><span class='relatedKey'>.users_id</span></td>
+                                                <td class="constraint detail">fk_gymnasts_gyms_has_users1<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -336,10 +357,10 @@
                                     <td>id</td>
                                 </tr>
                                 <tr>
-                                    <td title='Indexed'>fk_gymnasts_users_idx</td>
+                                    <td title='Indexed'>fk_gymnasts_gyms_has_users1_idx</td>
                                     <td>Performance</td>
-                                    <td><span title='Ascending'>Asc</span></td>
-                                    <td>users_id</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>gyms_has_users_gyms_id + gyms_has_users_users_id</td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -364,28 +385,29 @@
                                 <div class="tab-content no-padding">
                                     <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="completed_daily_challenges.html" target="_top" title="completed_daily_challenges" alt="" coords="667,5,994,211">
-<area shape="rect" id="node2" href="gymnasts.html" target="_top" title="gymnasts" alt="" coords="208,323,613,685">
-<area shape="rect" id="node5" href="users.html" target="_top" title="users" alt="" coords="5,589,164,795">
-<area shape="rect" id="node3" href="completed_normal_challenges.html" target="_top" title="completed_normal_challenges" alt="" coords="657,228,1004,404">
-<area shape="rect" id="node4" href="gymnast_has_skills.html" target="_top" title="gymnast_has_skills" alt="" coords="721,421,941,568">
-<area shape="rect" id="node6" href="gymnasts_classes.html" target="_top" title="gymnasts_classes" alt="" coords="726,585,935,708">
+<area shape="rect" id="node1" href="completed_daily_challenges.html" target="_top" title="completed_daily_challenges" alt="" coords="738,5,1065,211">
+<area shape="rect" id="node2" href="gymnasts.html" target="_top" title="gymnasts" alt="" coords="248,323,684,715">
+<area shape="rect" id="node5" href="gyms_has_users.html" target="_top" title="gyms_has_users" alt="" coords="5,589,204,712">
+<area shape="rect" id="node3" href="completed_normal_challenges.html" target="_top" title="completed_normal_challenges" alt="" coords="728,228,1075,404">
+<area shape="rect" id="node4" href="gymnast_has_skills.html" target="_top" title="gymnast_has_skills" alt="" coords="791,421,1011,568">
+<area shape="rect" id="node6" href="gymnasts_classes.html" target="_top" title="gymnasts_classes" alt="" coords="797,585,1006,708">
 </map>
                                         <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/gymnasts.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="completed_daily_challenges.html" target="_top" title="completed_daily_challenges" alt="" coords="843,485,1170,691">
-<area shape="rect" id="node2" href="daily_challenges.html" target="_top" title="daily_challenges" alt="" coords="488,576,685,664">
-<area shape="rect" id="node3" href="gymnasts.html" target="_top" title="gymnasts" alt="" coords="384,196,789,559">
-<area shape="rect" id="node6" href="classes.html" target="_top" title="classes" alt="" coords="194,123,327,211">
-<area shape="rect" id="node9" href="users.html" target="_top" title="users" alt="" coords="181,463,340,668">
-<area shape="rect" id="node4" href="completed_normal_challenges.html" target="_top" title="completed_normal_challenges" alt="" coords="833,5,1180,181">
-<area shape="rect" id="node5" href="normal_challenges.html" target="_top" title="normal_challenges" alt="" coords="480,55,693,143">
-<area shape="rect" id="node7" href="gymnast_has_skills.html" target="_top" title="gymnast_has_skills" alt="" coords="897,708,1117,855">
-<area shape="rect" id="node8" href="skills.html" target="_top" title="skills" alt="" coords="521,740,653,828">
-<area shape="rect" id="node11" href="gyms.html" target="_top" title="gyms" alt="" coords="5,509,137,597">
-<area shape="rect" id="node10" href="gymnasts_classes.html" target="_top" title="gymnasts_classes" alt="" coords="902,199,1111,321">
+<area shape="rect" id="node1" href="completed_daily_challenges.html" target="_top" title="completed_daily_challenges" alt="" coords="914,515,1241,720">
+<area shape="rect" id="node2" href="daily_challenges.html" target="_top" title="daily_challenges" alt="" coords="543,605,741,693">
+<area shape="rect" id="node3" href="gymnasts.html" target="_top" title="gymnasts" alt="" coords="424,196,860,588">
+<area shape="rect" id="node6" href="classes.html" target="_top" title="classes" alt="" coords="214,123,347,211">
+<area shape="rect" id="node9" href="gyms_has_users.html" target="_top" title="gyms_has_users" alt="" coords="181,463,380,585">
+<area shape="rect" id="node4" href="completed_normal_challenges.html" target="_top" title="completed_normal_challenges" alt="" coords="904,5,1251,181">
+<area shape="rect" id="node5" href="normal_challenges.html" target="_top" title="normal_challenges" alt="" coords="535,55,749,143">
+<area shape="rect" id="node7" href="gymnast_has_skills.html" target="_top" title="gymnast_has_skills" alt="" coords="967,737,1187,884">
+<area shape="rect" id="node8" href="skills.html" target="_top" title="skills" alt="" coords="576,769,708,857">
+<area shape="rect" id="node11" href="gyms.html" target="_top" title="gyms" alt="" coords="11,427,131,515">
+<area shape="rect" id="node12" href="users.html" target="_top" title="users" alt="" coords="5,532,137,620">
+<area shape="rect" id="node10" href="gymnasts_classes.html" target="_top" title="gymnasts_classes" alt="" coords="973,199,1182,321">
 </map>
                                         <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/gymnasts.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>

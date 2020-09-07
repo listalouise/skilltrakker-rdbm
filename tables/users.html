@@ -120,42 +120,25 @@
                                     <td>INT</td>
                                     <td>10</td>
                                     <td title=''></td>
-                                    <td title='Automatically updated by the database'>√</td>
-                                    <td>null</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                            <tr>
-                                                <td title="gymnasts.users_id references users.id via fk_gymnasts_users_idx"><a href='gymnasts.html'>gymnasts</a><span class='relatedKey'>.users_id</span></td>
-                                                <td class="constraint detail">fk_gymnasts_users_idx<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td title="gyms.owner_id references users.id via fk_gyms_users"><a href='gyms.html'>gyms</a><span class='relatedKey'>.owner_id</span></td>
-                                                <td class="constraint detail">fk_gyms_users<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td><p>user&rsquo; code</p></td>
-                                </tr>
-                                <tr>
-                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="username">username</span></td>
-                                    <td>VARCHAR</td>
-                                    <td>45</td>
-                                    <td title=''></td>
                                     <td title=''></td>
                                     <td>null</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="gyms_has_users.users_id references users.id via fk_gyms_has_users_users1"><a href='gyms_has_users.html'>gyms_has_users</a><span class='relatedKey'>.users_id</span></td>
+                                                <td class="constraint detail">fk_gyms_has_users_users1<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="subscriptions.users_id references users.id via fk_subscriptions_has_users1"><a href='subscriptions.html'>subscriptions</a><span class='relatedKey'>.users_id</span></td>
+                                                <td class="constraint detail">fk_subscriptions_has_users1<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
                                     </td>
-                                    <td><p>user&rsquo; username for login into the system</p></td>
+                                    <td><p>USER&rsquo; code</p></td>
                                 </tr>
                                 <tr>
                                     <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="email">email</span></td>
@@ -192,58 +175,7 @@
                                     <td><p>user&rsquo; password for loging into the system</p></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="stripe_Id">stripe_Id</span></td>
-                                    <td>VARCHAR</td>
-                                    <td>45</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>null</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td><p>user&rsquo; code for stripe plataform</p></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="stripe_email">stripe_email</span></td>
-                                    <td>VARCHAR</td>
-                                    <td>45</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>null</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td><p>user&rsquo; email in stripe plataform</p></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="stripe_key">stripe_key</span></td>
-                                    <td>VARCHAR</td>
-                                    <td>45</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>null</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td><p>user&rsquo; stripe key</p></td>
-                                </tr>
-                                <tr>
-                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="gyms_id">gyms_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="rol_id">rol_id</span></td>
                                     <td>INT</td>
                                     <td>10</td>
                                     <td title=''></td>
@@ -256,12 +188,12 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="users.gyms_id references gyms.id via fk_users_gyms"><a href='gyms.html'>gyms</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">fk_users_gyms<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="users.rol_id references rol.id via fk_users_rol1"><a href='rol.html'>rol</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_users_rol1<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
-                                    <td><p>gym&rsquo; id which the user belongs</p></td>
+                                    <td><p>ROL&rsquo; code</p></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -300,16 +232,10 @@
                                     <td>email</td>
                                 </tr>
                                 <tr>
-                                    <td title='Indexed'>fk_users_gyms_idx</td>
+                                    <td title='Indexed'>fk_users_rol1_idx</td>
                                     <td>Performance</td>
                                     <td><span title='Ascending'>Asc</span></td>
-                                    <td>gyms_id</td>
-                                </tr>
-                                <tr>
-                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> username_UNIQUE</td>
-                                    <td>Must be unique</td>
-                                    <td><span title='Ascending'>Asc</span></td>
-                                    <td>username</td>
+                                    <td>rol_id</td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -334,22 +260,24 @@
                                 <div class="tab-content no-padding">
                                     <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="gymnasts.html" target="_top" title="gymnasts" alt="" coords="489,5,735,152">
-<area shape="rect" id="node2" href="users.html" target="_top" title="users" alt="" coords="200,32,445,336">
-<area shape="rect" id="node3" href="gyms.html" target="_top" title="gyms" alt="" coords="5,123,156,269">
+<area shape="rect" id="node1" href="gyms_has_users.html" target="_top" title="gyms_has_users" alt="" coords="500,5,699,128">
+<area shape="rect" id="node2" href="users.html" target="_top" title="users" alt="" coords="209,88,431,275">
+<area shape="rect" id="node4" href="rol.html" target="_top" title="rol" alt="" coords="5,179,165,296">
+<area shape="rect" id="node3" href="subscriptions.html" target="_top" title="subscriptions" alt="" coords="475,145,724,321">
 </map>
                                         <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/users.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="completed_daily_challenges.html" target="_top" title="completed_daily_challenges" alt="" coords="787,5,1064,93">
-<area shape="rect" id="node2" href="gymnasts.html" target="_top" title="gymnasts" alt="" coords="489,161,735,308">
-<area shape="rect" id="node5" href="users.html" target="_top" title="users" alt="" coords="200,188,445,492">
-<area shape="rect" id="node3" href="completed_normal_challenges.html" target="_top" title="completed_normal_challenges" alt="" coords="779,111,1072,199">
-<area shape="rect" id="node4" href="gymnast_has_skills.html" target="_top" title="gymnast_has_skills" alt="" coords="817,216,1034,304">
-<area shape="rect" id="node7" href="gyms.html" target="_top" title="gyms" alt="" coords="5,161,156,308">
-<area shape="rect" id="node6" href="gymnasts_classes.html" target="_top" title="gymnasts_classes" alt="" coords="821,321,1030,409">
-<area shape="rect" id="node8" href="timeline.html" target="_top" title="timeline" alt="" coords="255,83,391,171">
+<area shape="rect" id="node1" href="gymnasts.html" target="_top" title="gymnasts" alt="" coords="768,61,917,149">
+<area shape="rect" id="node2" href="gyms_has_users.html" target="_top" title="gyms_has_users" alt="" coords="500,44,699,167">
+<area shape="rect" id="node3" href="gyms.html" target="_top" title="gyms" alt="" coords="260,5,380,93">
+<area shape="rect" id="node4" href="users.html" target="_top" title="users" alt="" coords="209,111,431,297">
+<area shape="rect" id="node9" href="rol.html" target="_top" title="rol" alt="" coords="5,201,165,319">
+<area shape="rect" id="node5" href="payments.html" target="_top" title="payments" alt="" coords="768,315,917,403">
+<area shape="rect" id="node6" href="subscriptions.html" target="_top" title="subscriptions" alt="" coords="475,283,724,459">
+<area shape="rect" id="node7" href="payment_procesors.html" target="_top" title="payment_procesors" alt="" coords="210,315,430,403">
+<area shape="rect" id="node8" href="plans.html" target="_top" title="plans" alt="" coords="260,420,380,508">
 </map>
                                         <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/users.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
