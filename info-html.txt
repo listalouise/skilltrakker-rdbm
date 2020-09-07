@@ -1,4 +1,4 @@
-date=2020-09-06 19:08:42-0500
+date=2020-09-06 19:17:40-0500
 os=Linux 5.4.0-45-generic
 schemaspy-version=6.1.0
 schemaspy-build=6.1.0.41 2019-09-17 21:52:57
