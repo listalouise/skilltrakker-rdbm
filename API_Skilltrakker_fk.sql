@@ -37,11 +37,11 @@ COMMENT = 'Table that stores gyms information';
 -- -----------------------------------------------------
 -- Table rol
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS rol ;
+DROP TABLE IF EXISTS roles ;
 
-CREATE TABLE IF NOT EXISTS rol (
-  id INT NOT NULL COMMENT 'Rol\` Code',
-  name VARCHAR(45) NOT NULL COMMENT 'Rol\` name, (Owner, Administrator,user)',
+CREATE TABLE IF NOT EXISTS roles (
+  id bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Roles\` Code',
+  name VARCHAR(45) NOT NULL COMMENT 'Roles\` name, (Owner, Administrator,user)',
   access_level INT NOT NULL COMMENT 'Number that define the Access level of the rol.',
   PRIMARY KEY (id))
 ENGINE = InnoDB
@@ -57,10 +57,8 @@ CREATE TABLE IF NOT EXISTS users (
   id INT NOT NULL COMMENT 'USER\` code',
   email VARCHAR(45) NOT NULL COMMENT 'user\` email address',
   password VARCHAR(45) NOT NULL COMMENT 'user\` password for loging into the system',
-  rol_id INT NOT NULL COMMENT 'ROL\` code',
   PRIMARY KEY (id),
-  UNIQUE INDEX email_UNIQUE (email ASC),
-  INDEX fk_users_rol1_idx (rol_id ASC))
+  UNIQUE INDEX email_UNIQUE (email ASC))
 ENGINE = InnoDB
 COMMENT = 'Table that stores USERS information';
 
@@ -368,17 +366,58 @@ CREATE TABLE IF NOT EXISTS payments (
 ENGINE = InnoDB
 COMMENT = 'Table that stores PAYMENTS made for an specific subscription';
 
+DROP TABLE IF EXISTS password_resets ;
 
+CREATE TABLE IF NOT EXISTS password_resets (
+  email varchar(255) NOT NULL,
+  token varchar(255) NOT NULL,
+  created_at DATETIME NULL,
+  INDEX password_resets_email_index (`email`))
+ENGINE = InnoDB
+COMMENT = 'Table that stores the tokens for changing user passwords';
+
+CREATE TABLE IF NOT EXISTS permissions (
+  id bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  name varchar(255) NOT NULL,
+  guard_name varchar(255) NOT NULL,
+  created_at timestamp NULL DEFAULT NULL,
+  updated_at timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)) 
+ENGINE = InnoDB
+COMMENT = 'Table that stores user permissions';
+
+DROP TABLE IF EXISTS model_has_roles;
+CREATE TABLE IF NOT EXISTS model_has_roles (
+  role_id bigint(20) UNSIGNED NOT NULL,
+  model_type varchar(255) NOT NULL,
+  model_id bigint(20) UNSIGNED NOT NULL,
+  PRIMARY KEY (role_id,model_id,model_type),
+  KEY model_has_roles_model_id_model_type_index (model_id,model_type)) 
+ENGINE=InnoDB
+COMMENT = 'Table that stores the relationships between users and roles';
+
+DROP TABLE IF EXISTS model_has_permissions;
+CREATE TABLE IF NOT EXISTS model_has_permissions (
+  permission_id bigint(20) UNSIGNED NOT NULL,
+  model_type varchar(255) NOT NULL,
+  model_id bigint(20) UNSIGNED NOT NULL,
+  PRIMARY KEY (permission_id,model_id,model_type),
+  KEY model_has_permissions_model_id_model_type_index (model_id,model_type))
+ENGINE=InnoDB
+COMMENT = 'Table that stores the relationships between users and permissions';
 -- -----------------------------------------------------
 -- ALTER TABLES FOR FK
 -- -----------------------------------------------------
-
-ALTER TABLE users
-ADD CONSTRAINT fk_users_rol1
-    FOREIGN KEY (rol_id)
-    REFERENCES rol (id)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION;
+ALTER TABLE model_has_permissions
+  ADD CONSTRAINT model_has_permissions_permission_id_foreign 
+      FOREIGN KEY (permission_id) 
+      REFERENCES permissions (id) 
+      ON DELETE CASCADE;
+ALTER TABLE model_has_roles
+  ADD CONSTRAINT model_has_roles_role_id_foreign 
+      FOREIGN KEY (role_id) 
+      REFERENCES roles (id) 
+      ON DELETE CASCADE;
 
 ALTER TABLE gyms_has_users 
 ADD CONSTRAINT fk_gyms_has_users_gyms1
