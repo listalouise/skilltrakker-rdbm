@@ -382,6 +382,8 @@
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="Roles` name, (Owner, Administrator,user)" size="45" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="access_level" nullable="false" remarks="Number that define the Access level of the rol." size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="created_at" nullable="true" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="updated_at" nullable="true" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="PRIMARY" unique="true">
             <column ascending="true" name="id"/>
@@ -469,6 +471,9 @@
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="email" nullable="false" remarks="user` email address" size="45" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="password" nullable="false" remarks="user` password for loging into the system" size="45" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="created_at" nullable="true" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="updated_at" nullable="true" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="deleted_at" nullable="true" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="PRIMARY" unique="true">
             <column ascending="true" name="id"/>

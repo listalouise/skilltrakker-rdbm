@@ -43,6 +43,8 @@ CREATE TABLE IF NOT EXISTS roles (
   id bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Roles\` Code',
   name VARCHAR(45) NOT NULL COMMENT 'Roles\` name, (Owner, Administrator,user)',
   access_level INT NOT NULL COMMENT 'Number that define the Access level of the rol.',
+  created_at timestamp NULL DEFAULT NULL,
+  updated_at timestamp NULL DEFAULT NULL,
   PRIMARY KEY (id))
 ENGINE = InnoDB
 COMMENT = 'Table that stores USERS rol into the system';
@@ -57,6 +59,9 @@ CREATE TABLE IF NOT EXISTS users (
   id INT NOT NULL COMMENT 'USER\` code',
   email VARCHAR(45) NOT NULL COMMENT 'user\` email address',
   password VARCHAR(45) NOT NULL COMMENT 'user\` password for loging into the system',
+  created_at timestamp NULL DEFAULT NULL,
+  updated_at timestamp NULL DEFAULT NULL,
+  deleted_at timestamp NULL DEFAULT NULL,
   PRIMARY KEY (id),
   UNIQUE INDEX email_UNIQUE (email ASC))
 ENGINE = InnoDB
