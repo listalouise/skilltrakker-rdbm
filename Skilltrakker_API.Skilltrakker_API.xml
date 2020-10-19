@@ -207,10 +207,10 @@
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="GYM Name" size="45" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="description" nullable="true" remarks="GYM Description" size="45" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="phone" nullable="false" remarks="GYM Phone" size="45" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="web" nullable="false" remarks="GYM web domain" size="45" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="address" nullable="true" remarks="GYM Address in JSON format" size="1073741824" type="JSON" typeCode="-1"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="timeline" nullable="true" remarks="GYM` Timeline" size="1073741824" type="JSON" typeCode="-1"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="settings" nullable="true" remarks="GYM Settings in JSON format" size="1073741824" type="JSON" typeCode="-1"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="created_at" nullable="true" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="updated_at" nullable="true" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="deleted_at" nullable="true" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="PRIMARY" unique="true">
             <column ascending="true" name="id"/>

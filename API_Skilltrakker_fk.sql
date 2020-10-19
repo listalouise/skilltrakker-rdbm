@@ -25,10 +25,10 @@ CREATE TABLE IF NOT EXISTS gyms (
   id INT NOT NULL AUTO_INCREMENT COMMENT 'GYM code',
   name VARCHAR(45) NOT NULL COMMENT 'GYM Name',
   description VARCHAR(45) NULL DEFAULT NULL COMMENT 'GYM Description',
-  phone VARCHAR(45) NOT NULL COMMENT 'GYM Phone',
-  web VARCHAR(45) NOT NULL COMMENT 'GYM web domain',
-  address JSON NULL DEFAULT NULL COMMENT 'GYM Address in JSON format',
-  timeline JSON NULL COMMENT 'GYM\` Timeline',
+  settings JSON NULL DEFAULT NULL COMMENT 'GYM Settings in JSON format',
+  created_at timestamp NULL DEFAULT NULL,
+  updated_at timestamp NULL DEFAULT NULL,
+  deleted_at timestamp NULL DEFAULT NULL,
   PRIMARY KEY (id))
 ENGINE = InnoDB
 COMMENT = 'Table that stores gyms information';

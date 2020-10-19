@@ -60,21 +60,21 @@
 <polygon fill="none" stroke="#000000" points="95,-147.2 95,-169.2 188,-169.2 188,-147.2 95,-147.2"/>
 <text text-anchor="start" x="98" y="-154.9" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">varchar[45]</text>
 <polygon fill="none" stroke="#000000" points="10,-125.2 10,-147.2 95,-147.2 95,-125.2 10,-125.2"/>
-<text text-anchor="start" x="30" y="-132.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">phone</text>
+<text text-anchor="start" x="30" y="-132.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">settings</text>
 <polygon fill="none" stroke="#000000" points="95,-125.2 95,-147.2 188,-147.2 188,-125.2 95,-125.2"/>
-<text text-anchor="start" x="98" y="-132.9" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">varchar[45]</text>
+<text text-anchor="start" x="97.7833" y="-132.9" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">json[1073741824]</text>
 <polygon fill="none" stroke="#000000" points="10,-103.2 10,-125.2 95,-125.2 95,-103.2 10,-103.2"/>
-<text text-anchor="start" x="30" y="-110.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">web</text>
+<text text-anchor="start" x="30" y="-110.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">created_at</text>
 <polygon fill="none" stroke="#000000" points="95,-103.2 95,-125.2 188,-125.2 188,-103.2 95,-103.2"/>
-<text text-anchor="start" x="98" y="-110.9" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">varchar[45]</text>
+<text text-anchor="start" x="98" y="-110.9" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">timestamp[19]</text>
 <polygon fill="none" stroke="#000000" points="10,-81.2 10,-103.2 95,-103.2 95,-81.2 10,-81.2"/>
-<text text-anchor="start" x="30" y="-88.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">address</text>
+<text text-anchor="start" x="30" y="-88.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">updated_at</text>
 <polygon fill="none" stroke="#000000" points="95,-81.2 95,-103.2 188,-103.2 188,-81.2 95,-81.2"/>
-<text text-anchor="start" x="97.7833" y="-88.9" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">json[1073741824]</text>
+<text text-anchor="start" x="98" y="-88.9" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">timestamp[19]</text>
 <polygon fill="none" stroke="#000000" points="10,-59.2 10,-81.2 95,-81.2 95,-59.2 10,-59.2"/>
-<text text-anchor="start" x="30" y="-66.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">timeline</text>
+<text text-anchor="start" x="30" y="-66.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">deleted_at</text>
 <polygon fill="none" stroke="#000000" points="95,-59.2 95,-81.2 188,-81.2 188,-59.2 95,-59.2"/>
-<text text-anchor="start" x="97.7833" y="-66.9" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">json[1073741824]</text>
+<text text-anchor="start" x="98" y="-66.9" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">timestamp[19]</text>
 <polygon fill="#ffffff" stroke="transparent" points="10,-40.2 10,-59.2 44,-59.2 44,-40.2 10,-40.2"/>
 <polygon fill="none" stroke="#000000" points="10,-40.2 10,-59.2 44,-59.2 44,-40.2 10,-40.2"/>
 <text text-anchor="start" x="13" y="-46.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">&lt; 0</text>

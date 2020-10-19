@@ -521,13 +521,13 @@
 <polygon fill="none" stroke="#000000" points="35.5,-949.2 35.5,-971.2 120.5,-971.2 120.5,-949.2 35.5,-949.2"/>
 <text text-anchor="start" x="55.5" y="-956.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">description</text>
 <polygon fill="none" stroke="#000000" points="35.5,-927.2 35.5,-949.2 120.5,-949.2 120.5,-927.2 35.5,-927.2"/>
-<text text-anchor="start" x="55.5" y="-934.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">phone</text>
+<text text-anchor="start" x="55.5" y="-934.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">settings</text>
 <polygon fill="none" stroke="#000000" points="35.5,-905.2 35.5,-927.2 120.5,-927.2 120.5,-905.2 35.5,-905.2"/>
-<text text-anchor="start" x="55.5" y="-912.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">web</text>
+<text text-anchor="start" x="55.5" y="-912.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">created_at</text>
 <polygon fill="none" stroke="#000000" points="35.5,-883.2 35.5,-905.2 120.5,-905.2 120.5,-883.2 35.5,-883.2"/>
-<text text-anchor="start" x="55.5" y="-890.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">address</text>
+<text text-anchor="start" x="55.5" y="-890.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">updated_at</text>
 <polygon fill="none" stroke="#000000" points="35.5,-861.2 35.5,-883.2 120.5,-883.2 120.5,-861.2 35.5,-861.2"/>
-<text text-anchor="start" x="55.5" y="-868.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">timeline</text>
+<text text-anchor="start" x="55.5" y="-868.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">deleted_at</text>
 <polygon fill="#ffffff" stroke="transparent" points="35.5,-842.2 35.5,-861.2 54.5,-861.2 54.5,-842.2 35.5,-842.2"/>
 <polygon fill="none" stroke="#000000" points="35.5,-842.2 35.5,-861.2 54.5,-861.2 54.5,-842.2 35.5,-842.2"/>
 <text text-anchor="start" x="38.5" y="-848.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000"> &#160;</text>
