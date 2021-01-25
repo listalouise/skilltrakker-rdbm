@@ -22,7 +22,7 @@ USE Skilltrakker_API ;
 DROP TABLE IF EXISTS gyms ;
 
 CREATE TABLE IF NOT EXISTS gyms (
-  id INT NOT NULL AUTO_INCREMENT COMMENT 'GYM code',
+  id bigint NOT NULL AUTO_INCREMENT COMMENT 'GYM code',
   name VARCHAR(45) NOT NULL COMMENT 'GYM Name',
   description VARCHAR(45) NULL DEFAULT NULL COMMENT 'GYM Description',
   settings JSON NULL DEFAULT NULL COMMENT 'GYM Settings in JSON format',
@@ -57,6 +57,7 @@ DROP TABLE IF EXISTS users ;
 
 CREATE TABLE IF NOT EXISTS users (
   id INT NOT NULL COMMENT 'USER\` code',
+  name VARCHAR(255) NOT NULL COMMENT 'user\` name',
   email VARCHAR(45) NOT NULL COMMENT 'user\` email address',
   password VARCHAR(45) NOT NULL COMMENT 'user\` password for loging into the system',
   created_at timestamp NULL DEFAULT NULL,
@@ -74,11 +75,11 @@ COMMENT = 'Table that stores USERS information';
 DROP TABLE IF EXISTS gyms_has_users ;
 
 CREATE TABLE IF NOT EXISTS gyms_has_users (
-  gyms_id INT NOT NULL COMMENT 'GYM\` Code',
-  users_id INT NOT NULL COMMENT 'USER\` code',
-  PRIMARY KEY (gyms_id, users_id),
-  INDEX fk_gyms_has_users_users1_idx (users_id ASC),
-  INDEX fk_gyms_has_users_gyms1_idx (gyms_id ASC))
+  gym_id bigint NOT NULL COMMENT 'GYM\` Code',
+  user_id INT NOT NULL COMMENT 'USER\` code',
+  PRIMARY KEY (gym_id, user_id),
+  INDEX fk_gyms_has_users_user1_idx (user_id ASC),
+  INDEX fk_gyms_has_users_gym1_idx (gym_id ASC))
 ENGINE = InnoDB
 COMMENT = 'Table that contains Gyms\`s users';
 
@@ -98,7 +99,7 @@ CREATE TABLE IF NOT EXISTS gymnasts (
   about MEDIUMTEXT NULL DEFAULT NULL COMMENT 'Decription of the gymnast\n',
   created DATE NOT NULL,
   updated DATE NOT NULL,
-  gyms_has_users_gyms_id INT NOT NULL,
+  gyms_has_users_gyms_id bigint NOT NULL,
   gyms_has_users_users_id INT NOT NULL,
   PRIMARY KEY (id),
   INDEX fk_gymnasts_gyms_has_users1_idx (gyms_has_users_gyms_id ASC, gyms_has_users_users_id ASC))
@@ -172,9 +173,14 @@ DROP TABLE IF EXISTS events ;
 
 CREATE TABLE IF NOT EXISTS events (
   id INT NOT NULL COMMENT 'Code of the Event',
-  name VARCHAR(45) NULL COMMENT 'Name of the Event',
-  abbrev VARCHAR(45) NULL COMMENT 'Abbreviation of the Event  ',
-  PRIMARY KEY (id))
+  gym_id bigint NOT NULL COMMENT 'Code of the Gym',
+  name CHAR(45) NULL COMMENT 'Name of the Event',
+  abbrev CHAR(5) NULL COMMENT 'Abbreviation of the Event  ',
+  created_at timestamp NULL DEFAULT NULL,
+  updated_at timestamp NULL DEFAULT NULL,
+  deleted_at timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (id),
+  INDEX fk_events_gym1_idx (gym_id ASC))
 ENGINE = InnoDB
 COMMENT = 'Table that stores the EVENTS in wich a skill is executed, if they are active and the respective abreviation.';
 
@@ -425,21 +431,28 @@ ALTER TABLE model_has_roles
       ON DELETE CASCADE;
 
 ALTER TABLE gyms_has_users 
-ADD CONSTRAINT fk_gyms_has_users_gyms1
-    FOREIGN KEY (gyms_id)
+ADD CONSTRAINT fk_gyms_has_users_gym1
+    FOREIGN KEY (gym_id)
     REFERENCES gyms (id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-ADD CONSTRAINT fk_gyms_has_users_users1
-    FOREIGN KEY (users_id)
+ADD CONSTRAINT fk_gyms_has_users_user1
+    FOREIGN KEY (user_id)
     REFERENCES users (id)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION;
+
+ALTER TABLE events
+ADD CONSTRAINT fk_events_gym1
+    FOREIGN KEY (gym_id) 
+    REFERENCES gyms (id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION;
 
 ALTER TABLE gymnasts
 ADD CONSTRAINT fk_gymnasts_gyms_has_users1
     FOREIGN KEY (gyms_has_users_gyms_id , gyms_has_users_users_id)
-    REFERENCES gyms_has_users (gyms_id , users_id)
+    REFERENCES gyms_has_users (gym_id , user_id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION;
 

@@ -12,14 +12,14 @@ normal_challenges
 skills
 daily_challenges
 gymnasts
+events
 gyms_has_users
 roles
 plans
 permissions
 payment_procesors
 levels
-gyms
-events
 users
+gyms
 challenges
 classes

@@ -1,14 +1,14 @@
 classes
 challenges
-users
-events
 gyms
+users
 levels
 payment_procesors
 permissions
 plans
 roles
 gyms_has_users
+events
 gymnasts
 daily_challenges
 skills
