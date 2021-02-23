@@ -8,8 +8,8 @@ gymnast_has_skills
 model_has_roles
 model_has_permissions
 subscriptions
-normal_challenges
 skills
+normal_challenges
 daily_challenges
 gymnasts
 events
@@ -18,8 +18,9 @@ roles
 plans
 permissions
 payment_procesors
-levels
+categories
 users
+levels
 gyms
 challenges
 classes

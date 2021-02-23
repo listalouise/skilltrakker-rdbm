@@ -158,9 +158,27 @@ COMMENT = 'Table that stores the CHALLENGES that a CLASS had.';
 DROP TABLE IF EXISTS levels ;
 
 CREATE TABLE IF NOT EXISTS levels (
-  id INT NOT NULL AUTO_INCREMENT COMMENT 'Code of the Level',
+  id bigint NOT NULL AUTO_INCREMENT COMMENT 'Code of the Level',
   level VARCHAR(45) NOT NULL COMMENT 'Name for the Level',
   description MEDIUMTEXT NULL DEFAULT NULL COMMENT 'Description of what that level means',
+  created_at timestamp NULL DEFAULT NULL,
+  updated_at timestamp NULL DEFAULT NULL,
+  deleted_at timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (id))
+ENGINE = InnoDB
+COMMENT = 'Table that stores LEVELS description for the diferents skills.';
+
+-- -----------------------------------------------------
+-- Table categories
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS categories ;
+
+CREATE TABLE IF NOT EXISTS categories (
+  id bigint NOT NULL AUTO_INCREMENT COMMENT 'Code of the Level',
+  name VARCHAR(45) NOT NULL COMMENT 'Name for the Level',
+  created_at timestamp NULL DEFAULT NULL,
+  updated_at timestamp NULL DEFAULT NULL,
+  deleted_at timestamp NULL DEFAULT NULL,
   PRIMARY KEY (id))
 ENGINE = InnoDB
 COMMENT = 'Table that stores LEVELS description for the diferents skills.';
@@ -172,7 +190,7 @@ COMMENT = 'Table that stores LEVELS description for the diferents skills.';
 DROP TABLE IF EXISTS events ;
 
 CREATE TABLE IF NOT EXISTS events (
-  id INT NOT NULL COMMENT 'Code of the Event',
+  id bigint NOT NULL COMMENT 'Code of the Event',
   gym_id bigint NOT NULL COMMENT 'Code of the Gym',
   name CHAR(45) NULL COMMENT 'Name of the Event',
   abbrev CHAR(5) NULL COMMENT 'Abbreviation of the Event  ',
@@ -191,14 +209,18 @@ COMMENT = 'Table that stores the EVENTS in wich a skill is executed, if they are
 DROP TABLE IF EXISTS skills ;
 
 CREATE TABLE IF NOT EXISTS skills (
-  id INT NOT NULL AUTO_INCREMENT COMMENT 'Code of the Skill',
+  id bigint UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Code of the Skill',
   name VARCHAR(45) NOT NULL COMMENT 'Name of the skill',
   description MEDIUMTEXT NULL COMMENT 'Description of the Skill\n',
   category VARCHAR(45) NOT NULL COMMENT 'category to which the event belongs',
   certificate TINYINT(1) GENERATED ALWAYS AS (0)  COMMENT 'Boolean value to know the status',
-  events_id INT NOT NULL COMMENT 'Code of the Event',
+  event_id bigint NOT NULL COMMENT 'Code of the Event',
+  category_id bigint NOT NULL COMMENT 'Code of the Category',
+  level_id bigint NOT NULL COMMENT 'Code of the Level',
   PRIMARY KEY (id),
-  INDEX fk_skills_events_idx (events_id ASC))
+  INDEX fk_skills_event_idx (event_id ASC),
+  INDEX fk_skills_category_idx (category_id ASC),
+  INDEX fk_skills_level_idx (level_id ASC))
 ENGINE = InnoDB
 COMMENT = 'Table that stores SKILLS that a GYMNAST can get.';
 
@@ -210,7 +232,7 @@ DROP TABLE IF EXISTS gymnast_has_skills ;
 
 CREATE TABLE IF NOT EXISTS gymnast_has_skills (
   gymnast_id INT NOT NULL COMMENT 'Gymnast\` code',
-  skills_Id INT NOT NULL COMMENT 'Skill\` code',
+  skills_Id bigint UNSIGNED NOT NULL COMMENT 'Skill\` code',
   progress_status VARCHAR(45) NULL COMMENT 'Tells the gymnast actual status in learning the skill',
   coach_verify JSON NULL COMMENT 'Verification from a coach when an gymnast set the level for a skill',
   timestamp DATE NOT NULL,
@@ -228,8 +250,8 @@ COMMENT = 'Table that stores SKILLS that a GYMNAST get.';
 DROP TABLE IF EXISTS skill_has_levels ;
 
 CREATE TABLE IF NOT EXISTS skill_has_levels (
-  levels_id INT NOT NULL COMMENT 'Code of the Level',
-  skills_id INT NOT NULL COMMENT 'Code of the Skill',
+  levels_id bigint NOT NULL COMMENT 'Code of the Level',
+  skills_id bigint UNSIGNED NOT NULL COMMENT 'Code of the Skill',
   secuence TINYINT(1) GENERATED ALWAYS AS (0)  COMMENT 'The Skill has a secuence?\n0 No\n1 Yes',
   PRIMARY KEY (levels_id, skills_id),
   INDEX fk_level_is_part_of_skill_idx (skills_id ASC),
@@ -469,9 +491,19 @@ ADD CONSTRAINT fk_challenge_is_in_class_
     ON UPDATE NO ACTION;
 
 ALTER TABLE skills
-ADD CONSTRAINT fk_skills_events
-    FOREIGN KEY (events_id)
+ADD CONSTRAINT fk_skills_event
+    FOREIGN KEY (event_id)
     REFERENCES events (id)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+ADD CONSTRAINT fk_skills_category
+    FOREIGN KEY (category_id)
+    REFERENCES categories (id)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+ADD CONSTRAINT fk_skills_level
+    FOREIGN KEY (level_id)
+    REFERENCES levels (id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION;
 
