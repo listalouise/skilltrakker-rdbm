@@ -243,23 +243,6 @@ CREATE TABLE IF NOT EXISTS gymnast_has_skills (
 ENGINE = InnoDB
 COMMENT = 'Table that stores SKILLS that a GYMNAST get.';
 
-
--- -----------------------------------------------------
--- Table skill_has_levels
--- -----------------------------------------------------
-DROP TABLE IF EXISTS skill_has_levels ;
-
-CREATE TABLE IF NOT EXISTS skill_has_levels (
-  levels_id bigint NOT NULL COMMENT 'Code of the Level',
-  skills_id bigint UNSIGNED NOT NULL COMMENT 'Code of the Skill',
-  secuence TINYINT(1) GENERATED ALWAYS AS (0)  COMMENT 'The Skill has a secuence?\n0 No\n1 Yes',
-  PRIMARY KEY (levels_id, skills_id),
-  INDEX fk_level_is_part_of_skill_idx (skills_id ASC),
-  INDEX fk_skill_has_level_idx (levels_id ASC))
-ENGINE = InnoDB
-COMMENT = 'Table that stores LEVELS that a certain skill had.\nLogic Name: Skill Levels';
-
-
 -- -----------------------------------------------------
 -- Table gymnasts_classes
 -- -----------------------------------------------------
@@ -515,18 +498,6 @@ ADD CONSTRAINT fk_gymnast_has_skills
     ON UPDATE NO ACTION,
 ADD CONSTRAINT fk_skills_is_mastered_by_gymnast
     FOREIGN KEY (skills_Id)
-    REFERENCES skills (id)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION;
-
-ALTER TABLE skill_has_levels
-ADD CONSTRAINT fk_level_is_part_of_skill
-    FOREIGN KEY (levels_id)
-    REFERENCES levels (id)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-ADD CONSTRAINT fk_SKI_has_LVE
-    FOREIGN KEY (skills_id)
     REFERENCES skills (id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION;
