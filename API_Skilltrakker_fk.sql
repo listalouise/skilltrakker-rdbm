@@ -224,6 +224,36 @@ CREATE TABLE IF NOT EXISTS skills (
 ENGINE = InnoDB
 COMMENT = 'Table that stores SKILLS that a GYMNAST can get.';
 
+-- -----------------------------------------------------
+-- Table skill_lists
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS skill_lists ;
+
+CREATE TABLE IF NOT EXISTS skill_lists (
+  id bigint UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Code of the Skill list',
+  gym_id bigint NOT NULL COMMENT 'Code of the gym',
+  name VARCHAR(45) NOT NULL COMMENT 'Name of the skill List',
+  timestamp DATE NOT NULL,
+  PRIMARY KEY (id),
+  INDEX fk_skills_gym_idx (gym_id ASC))
+ENGINE = InnoDB
+COMMENT = 'Table that stores SKILLS List.';
+
+-- -----------------------------------------------------
+-- Table skill_lists_has_skills
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS skill_lists_has_skills ;
+
+CREATE TABLE IF NOT EXISTS skill_lists_has_skills (
+  skill_list_id bigint UNSIGNED NOT NULL COMMENT 'Skill List\` code',
+  skill_id bigint UNSIGNED NOT NULL COMMENT 'Skill\` code',
+  `order` INT NULL COMMENT 'Order for skill list',
+  timestamp DATE NOT NULL,
+  PRIMARY KEY (skill_list_id, skill_id),
+  INDEX fk_skill_lists_has_skills_skill_list_idx (skill_list_id ASC),
+  INDEX fk_skill_lists_has_skills_skill_idx (skill_id ASC))
+ENGINE = InnoDB
+COMMENT = 'table that stores the relation and the order of the kill lists.';
 
 -- -----------------------------------------------------
 -- Table gymnast_has_skills
@@ -487,6 +517,25 @@ ADD CONSTRAINT fk_skills_category
 ADD CONSTRAINT fk_skills_level
     FOREIGN KEY (level_id)
     REFERENCES levels (id)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION;
+
+ALTER TABLE skill_lists
+ADD CONSTRAINT fk_skills_gym
+    FOREIGN KEY (gym_id)
+    REFERENCES gyms (id)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION;
+
+ALTER TABLE skill_lists_has_skills
+ADD CONSTRAINT fk_skill_lists_has_skills_skill_list
+    FOREIGN KEY (skill_list_id)
+    REFERENCES skill_lists (id)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+ADD CONSTRAINT fk_skill_lists_has_skills_skill
+    FOREIGN KEY (skill_id)
+    REFERENCES skills (id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION;
 

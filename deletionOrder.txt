@@ -1,13 +1,15 @@
 password_resets
 completed_daily_challenges
 completed_normal_challenges
+skill_lists_has_skills
 payments
 gymnasts_classes
 gymnast_has_skills
 model_has_roles
 model_has_permissions
-skills
+skill_lists
 subscriptions
+skills
 normal_challenges
 daily_challenges
 gymnasts
@@ -20,6 +22,6 @@ payment_procesors
 levels
 categories
 users
-gyms
 challenges
+gyms
 classes
