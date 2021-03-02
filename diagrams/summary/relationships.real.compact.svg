@@ -890,11 +890,11 @@
 <text text-anchor="start" x="492.5219" y="-976.8" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">[table]</text>
 <polygon fill="none" stroke="#000000" points="441,-946.7 441,-968.7 527,-968.7 527,-946.7 441,-946.7"/>
 <image xlink:href="../../images/primaryKeys.png" width="11px" height="12px" preserveAspectRatio="xMinYMin meet" x="446" y="-963.7"/>
-<text text-anchor="start" x="464" y="-953.8" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">id</text>
+<text text-anchor="start" x="462" y="-953.8" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">id</text>
 <polygon fill="#ffffff" stroke="transparent" points="441,-924.7 441,-946.7 527,-946.7 527,-924.7 441,-924.7"/>
 <polygon fill="none" stroke="#000000" points="441,-924.7 441,-946.7 527,-946.7 527,-924.7 441,-924.7"/>
 <image xlink:href="../../images/foreignKeys.png" width="11px" height="12px" preserveAspectRatio="xMinYMin meet" x="446" y="-941.7"/>
-<text text-anchor="start" x="464" y="-931.8" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">gym_id</text>
+<text text-anchor="start" x="462" y="-931.8" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">gym_id</text>
 <polygon fill="none" stroke="#000000" points="441,-905.7 441,-924.7 527,-924.7 527,-905.7 441,-905.7"/>
 <text text-anchor="start" x="444" y="-911.8" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">...</text>
 <polygon fill="#ffffff" stroke="transparent" points="441,-886.7 441,-905.7 465,-905.7 465,-886.7 441,-886.7"/>

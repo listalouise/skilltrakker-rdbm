@@ -424,7 +424,9 @@
             <parent catalog="skilltrakker_api" column="id" foreignKey="fk_skills_gym" implied="false" onDeleteCascade="false" table="gyms"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="name" nullable="false" remarks="Name of the skill List" size="45" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="timestamp" nullable="false" remarks="" size="10" type="DATE" typeCode="91"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="created_at" nullable="true" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="updated_at" nullable="true" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="deleted_at" nullable="true" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="PRIMARY" unique="true">
             <column ascending="true" name="id"/>
@@ -441,7 +443,6 @@
             <parent catalog="skilltrakker_api" column="id" foreignKey="fk_skill_lists_has_skills_skill" implied="false" onDeleteCascade="false" table="skills"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="order" nullable="true" remarks="Order for skill list" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="timestamp" nullable="false" remarks="" size="10" type="DATE" typeCode="91"/>
          <primaryKey column="skill_id" sequenceNumberInPK="1"/>
          <primaryKey column="skill_list_id" sequenceNumberInPK="2"/>
          <index name="PRIMARY" unique="true">
@@ -473,6 +474,9 @@
          <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="level_id" nullable="false" remarks="Code of the Level" size="19" type="BIGINT" typeCode="-5">
             <parent catalog="skilltrakker_api" column="id" foreignKey="fk_skills_level" implied="false" onDeleteCascade="false" table="levels"/>
          </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="created_at" nullable="true" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="updated_at" nullable="true" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="deleted_at" nullable="true" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="PRIMARY" unique="true">
             <column ascending="true" name="id"/>

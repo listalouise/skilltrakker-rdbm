@@ -217,6 +217,9 @@ CREATE TABLE IF NOT EXISTS skills (
   event_id bigint NOT NULL COMMENT 'Code of the Event',
   category_id bigint NOT NULL COMMENT 'Code of the Category',
   level_id bigint NOT NULL COMMENT 'Code of the Level',
+  created_at timestamp NULL DEFAULT NULL,
+  updated_at timestamp NULL DEFAULT NULL,
+  deleted_at timestamp NULL DEFAULT NULL,
   PRIMARY KEY (id),
   INDEX fk_skills_event_idx (event_id ASC),
   INDEX fk_skills_category_idx (category_id ASC),
@@ -233,7 +236,9 @@ CREATE TABLE IF NOT EXISTS skill_lists (
   id bigint UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Code of the Skill list',
   gym_id bigint NOT NULL COMMENT 'Code of the gym',
   name VARCHAR(45) NOT NULL COMMENT 'Name of the skill List',
-  timestamp DATE NOT NULL,
+  created_at timestamp NULL DEFAULT NULL,
+  updated_at timestamp NULL DEFAULT NULL,
+  deleted_at timestamp NULL DEFAULT NULL,
   PRIMARY KEY (id),
   INDEX fk_skills_gym_idx (gym_id ASC))
 ENGINE = InnoDB
@@ -248,7 +253,6 @@ CREATE TABLE IF NOT EXISTS skill_lists_has_skills (
   skill_list_id bigint UNSIGNED NOT NULL COMMENT 'Skill List\` code',
   skill_id bigint UNSIGNED NOT NULL COMMENT 'Skill\` code',
   `order` INT NULL COMMENT 'Order for skill list',
-  timestamp DATE NOT NULL,
   PRIMARY KEY (skill_list_id, skill_id),
   INDEX fk_skill_lists_has_skills_skill_list_idx (skill_list_id ASC),
   INDEX fk_skill_lists_has_skills_skill_idx (skill_id ASC))
