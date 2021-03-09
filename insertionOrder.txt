@@ -1,4 +1,3 @@
-classes
 gyms
 challenges
 users
@@ -8,14 +7,15 @@ payment_procesors
 permissions
 plans
 roles
+skill_lists
 gyms_has_users
 events
+classes
 gymnasts
 daily_challenges
 normal_challenges
 skills
 subscriptions
-skill_lists
 model_has_permissions
 model_has_roles
 gymnast_has_skills

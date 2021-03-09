@@ -116,7 +116,12 @@ CREATE TABLE IF NOT EXISTS classes (
   id INT NOT NULL AUTO_INCREMENT COMMENT 'Class\` id',
   name VARCHAR(45) NOT NULL COMMENT 'Class\` name',
   description MEDIUMTEXT NULL DEFAULT NULL COMMENT 'Class\` description',
-  PRIMARY KEY (id))
+  skill_list_id bigint UNSIGNED NOT NULL COMMENT 'Code of the Skill list',
+  created_at timestamp NULL DEFAULT NULL,
+  updated_at timestamp NULL DEFAULT NULL,
+  deleted_at timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (id),
+  INDEX fk_classes_skill_list_idx (skill_list_id ASC))
 ENGINE = InnoDB
 COMMENT = 'Table that stores CLASSES\` information';
 
@@ -458,6 +463,11 @@ COMMENT = 'Table that stores the relationships between users and permissions';
 -- -----------------------------------------------------
 -- ALTER TABLES FOR FK
 -- -----------------------------------------------------
+ALTER TABLE classes
+  ADD CONSTRAINT fk_classes_skill_list_idx 
+      FOREIGN KEY (skill_list_id) 
+      REFERENCES skill_lists (id) 
+      ON DELETE CASCADE;
 ALTER TABLE model_has_permissions
   ADD CONSTRAINT model_has_permissions_permission_id_foreign 
       FOREIGN KEY (permission_id) 
