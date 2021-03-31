@@ -28,12 +28,12 @@
 <image xlink:href="../../images/primaryKeys.png" width="11px" height="12px" preserveAspectRatio="xMinYMin meet" x="238" y="-142.2"/>
 <text text-anchor="start" x="253" y="-132.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">normal_challenges_classes_id</text>
 <polygon fill="none" stroke="#000000" points="448,-125.2 448,-147.2 541,-147.2 541,-125.2 448,-125.2"/>
-<text text-anchor="start" x="451" y="-132.9" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">int[10]</text>
+<text text-anchor="start" x="451" y="-132.9" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">bigint[19]</text>
 <polygon fill="none" stroke="#000000" points="233,-103.2 233,-125.2 448,-125.2 448,-103.2 233,-103.2"/>
 <image xlink:href="../../images/primaryKeys.png" width="11px" height="12px" preserveAspectRatio="xMinYMin meet" x="238" y="-120.2"/>
 <text text-anchor="start" x="253" y="-110.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">normal_challenges_challenges_id</text>
 <polygon fill="none" stroke="#000000" points="448,-103.2 448,-125.2 541,-125.2 541,-103.2 448,-103.2"/>
-<text text-anchor="start" x="451" y="-110.9" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">int[10]</text>
+<text text-anchor="start" x="451" y="-110.9" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">bigint[19]</text>
 <polygon fill="none" stroke="#000000" points="233,-81.2 233,-103.2 448,-103.2 448,-81.2 233,-81.2"/>
 <text text-anchor="start" x="253" y="-88.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">date_of_completation</text>
 <polygon fill="none" stroke="#000000" points="448,-81.2 448,-103.2 541,-103.2 541,-81.2 448,-81.2"/>

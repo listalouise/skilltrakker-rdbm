@@ -12,6 +12,7 @@ skills
 normal_challenges
 daily_challenges
 gymnasts
+challenges
 classes
 events
 gyms_has_users
@@ -23,5 +24,4 @@ payment_procesors
 levels
 categories
 users
-challenges
 gyms

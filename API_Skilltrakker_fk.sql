@@ -113,7 +113,7 @@ COMMENT = 'Table that stores GYMNASTS information';
 DROP TABLE IF EXISTS classes ;
 
 CREATE TABLE IF NOT EXISTS classes (
-  id INT NOT NULL AUTO_INCREMENT COMMENT 'Class\` id',
+  id bigint NOT NULL AUTO_INCREMENT COMMENT 'Class\` id',
   name VARCHAR(45) NOT NULL COMMENT 'Class\` name',
   description MEDIUMTEXT NULL DEFAULT NULL COMMENT 'Class\` description',
   skill_list_id bigint UNSIGNED NOT NULL COMMENT 'Code of the Skill list',
@@ -132,11 +132,20 @@ COMMENT = 'Table that stores CLASSES\` information';
 DROP TABLE IF EXISTS challenges ;
 
 CREATE TABLE IF NOT EXISTS challenges (
-  id INT NOT NULL AUTO_INCREMENT,
+  id bigint NOT NULL AUTO_INCREMENT,
   name VARCHAR(45) NOT NULL,
   description MEDIUMTEXT NOT NULL,
   points INT NULL DEFAULT NULL,
-  PRIMARY KEY (id))
+  gym_id bigint NOT NULL COMMENT 'Code of the Gym',
+  class_id bigint NULL DEFAULT NULL COMMENT 'Code of the Class',
+  is_daily BOOLEAN NULL DEFAULT 0,
+  daily_expiration_date date NULL DEFAULT NULL,
+  created_at timestamp NULL DEFAULT NULL,
+  updated_at timestamp NULL DEFAULT NULL,
+  deleted_at timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (id),
+  INDEX fk_challenges_gym1_idx (gym_id ASC),
+  INDEX fk_challenges_class1_idx (class_id ASC))
 ENGINE = InnoDB
 COMMENT = 'Table that stores CHALLENGES\` information';
 
@@ -147,8 +156,8 @@ COMMENT = 'Table that stores CHALLENGES\` information';
 DROP TABLE IF EXISTS normal_challenges ;
 
 CREATE TABLE IF NOT EXISTS normal_challenges (
-  classes_id INT NOT NULL COMMENT 'Class\` code',
-  challenges_id INT NOT NULL COMMENT 'Challenge\` code',
+  classes_id bigint NOT NULL COMMENT 'Class\` code',
+  challenges_id bigint NOT NULL COMMENT 'Challenge\` code',
   is_active TINYINT(1) NOT NULL COMMENT 'Status of the Challenge\n0 Inactive\n1 Active',
   PRIMARY KEY (classes_id, challenges_id),
   INDEX fk_class_has_challenges_idx (challenges_id ASC),
@@ -289,7 +298,7 @@ DROP TABLE IF EXISTS gymnasts_classes ;
 
 CREATE TABLE IF NOT EXISTS gymnasts_classes (
   gymnasts_id INT NOT NULL COMMENT 'Foreing key from GYMNASTS table',
-  classes_id INT NOT NULL COMMENT 'Foreing key from CLASSES table',
+  classes_id bigint NOT NULL COMMENT 'Foreing key from CLASSES table',
   PRIMARY KEY (gymnasts_id, classes_id),
   INDEX fk_gymnast_has_classes_idx (classes_id ASC),
   INDEX fk_class_has_gymnasts_idx (gymnasts_id ASC))
@@ -303,8 +312,8 @@ COMMENT = 'Table that stores the CLASSES in what a GYMNAST is enrolled.';
 DROP TABLE IF EXISTS daily_challenges ;
 
 CREATE TABLE IF NOT EXISTS daily_challenges (
-  classes_id INT NOT NULL COMMENT 'Class\` code',
-  challenges_id INT NOT NULL COMMENT 'Challenge\` code',
+  classes_id bigint NOT NULL COMMENT 'Class\` code',
+  challenges_id bigint NOT NULL COMMENT 'Challenge\` code',
   date DATE NOT NULL COMMENT 'Date in wich the challenge has to be completed.',
   PRIMARY KEY (classes_id, challenges_id, date),
   INDEX fk_class_has_daily_challenges_idx (challenges_id ASC),
@@ -320,8 +329,8 @@ DROP TABLE IF EXISTS completed_normal_challenges ;
 
 CREATE TABLE IF NOT EXISTS completed_normal_challenges (
   gymnasts_id INT NOT NULL COMMENT 'gymnast’ code',
-  normal_challenges_classes_id INT NOT NULL COMMENT 'Foreing key from NORMAL CHALLENGES table',
-  normal_challenges_challenges_id INT NOT NULL COMMENT 'Foreing key from NORMAL CHALLENGES table',
+  normal_challenges_classes_id bigint NOT NULL COMMENT 'Foreing key from NORMAL CHALLENGES table',
+  normal_challenges_challenges_id bigint NOT NULL COMMENT 'Foreing key from NORMAL CHALLENGES table',
   date_of_completation DATE NOT NULL COMMENT 'Date in wich the challenge was completed',
   Interactions JSON NULL COMMENT 'Interactions for the completed challenged by others gymnasts\nHi 5\nComments\nApplasuse\nIn JSON Format',
   PRIMARY KEY (gymnasts_id, normal_challenges_classes_id, normal_challenges_challenges_id),
@@ -338,8 +347,8 @@ DROP TABLE IF EXISTS completed_daily_challenges ;
 
 CREATE TABLE IF NOT EXISTS completed_daily_challenges (
   gymnasts_id INT NOT NULL COMMENT 'gymnast’ code',
-  daily_challenges_classes_id INT NOT NULL COMMENT 'Foreing key from DAILY CHALLENGES table',
-  daily_challenges_challenges_id INT NOT NULL COMMENT 'Foreing key from DAILY CHALLENGES table',
+  daily_challenges_classes_id bigint NOT NULL COMMENT 'Foreing key from DAILY CHALLENGES table',
+  daily_challenges_challenges_id bigint NOT NULL COMMENT 'Foreing key from DAILY CHALLENGES table',
   daily_challenges_date DATE NOT NULL COMMENT 'Foreing key from DAILY CHALLENGES table',
   date_of_completation DATE NOT NULL COMMENT 'Date in wich the challenge was completed',
   Interactions VARCHAR(45) NULL COMMENT 'Interactions for the completed challenged by others gymnasts\nHi 5\nComments\nApplasuse\nIn JSON Format',
@@ -574,6 +583,18 @@ ADD CONSTRAINT fk_gymnast_has_classes
 ADD CONSTRAINT fk_class_has_gymnasts
     FOREIGN KEY (classes_id)
     REFERENCES classes (id)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION;
+
+ALTER TABLE challenges
+ADD CONSTRAINT fk_challenges_class1_idx
+    FOREIGN KEY (class_id)
+    REFERENCES classes (id)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+ADD CONSTRAINT fk_challenges_gym1_idx
+    FOREIGN KEY (gym_id)
+    REFERENCES gyms (id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION;
 

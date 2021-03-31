@@ -1,5 +1,4 @@
 gyms
-challenges
 users
 categories
 levels
@@ -11,6 +10,7 @@ skill_lists
 gyms_has_users
 events
 classes
+challenges
 gymnasts
 daily_challenges
 normal_challenges
