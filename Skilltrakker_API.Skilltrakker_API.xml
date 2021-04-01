@@ -207,18 +207,20 @@
             <child catalog="skilltrakker_api" column="gymnast_id" foreignKey="fk_gymnast_has_skills" implied="false" onDeleteCascade="false" table="gymnast_has_skills"/>
             <child catalog="skilltrakker_api" column="gymnasts_id" foreignKey="fk_gymnast_has_classes" implied="false" onDeleteCascade="false" table="gymnasts_has_classes"/>
          </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="Gymnast` name" size="45" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="birth_date" nullable="false" remarks="Gymnast` birth date" size="10" type="DATE" typeCode="91"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="3" name="life_time_score" nullable="false" remarks="Score gather by an gymnast since is member of a gym." size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="4" name="current_streak_points" nullable="false" remarks="Amount of points adquired by a Gymnas for loging everyday, is reset after 1 day of not loging." size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="last_streak" nullable="true" remarks="Last amount of points before the gymnast lost his streak" size="10" type="DATE" typeCode="91"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="about" nullable="true" remarks="Decription of the gymnast" size="16777215" type="MEDIUMTEXT" typeCode="-1"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="created" nullable="false" remarks="" size="10" type="DATE" typeCode="91"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="updated" nullable="false" remarks="" size="10" type="DATE" typeCode="91"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="gyms_has_users_gyms_id" nullable="false" remarks="" size="19" type="BIGINT" typeCode="-5">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="first_name" nullable="false" remarks="Gymnast` first name" size="45" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="last_name" nullable="false" remarks="Gymnast` last name" size="45" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="birth_date" nullable="false" remarks="Gymnast` birth date" size="10" type="DATE" typeCode="91"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="4" name="life_time_score" nullable="false" remarks="Score gather by an gymnast since is member of a gym." size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="5" name="current_streak_points" nullable="false" remarks="Amount of points adquired by a Gymnas for loging everyday, is reset after 1 day of not loging." size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="last_streak" nullable="true" remarks="Last amount of points before the gymnast lost his streak" size="10" type="DATE" typeCode="91"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="about" nullable="true" remarks="Decription of the gymnast" size="16777215" type="MEDIUMTEXT" typeCode="-1"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="created" nullable="false" remarks="" size="10" type="DATE" typeCode="91"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="updated" nullable="false" remarks="" size="10" type="DATE" typeCode="91"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="deleted_at" nullable="true" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="11" name="gyms_has_users_gyms_id" nullable="false" remarks="" size="19" type="BIGINT" typeCode="-5">
             <parent catalog="skilltrakker_api" column="gym_id" foreignKey="fk_gymnasts_gyms_has_users1" implied="false" onDeleteCascade="false" table="gyms_has_users"/>
          </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="gyms_has_users_users_id" nullable="false" remarks="" size="10" type="INT" typeCode="4">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="12" name="gyms_has_users_users_id" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <parent catalog="skilltrakker_api" column="user_id" foreignKey="fk_gymnasts_gyms_has_users1" implied="false" onDeleteCascade="false" table="gyms_has_users"/>
          </column>
          <primaryKey column="id" sequenceNumberInPK="1"/>

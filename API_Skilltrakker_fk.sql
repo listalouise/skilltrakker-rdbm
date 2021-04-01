@@ -91,7 +91,8 @@ DROP TABLE IF EXISTS gymnasts ;
 
 CREATE TABLE IF NOT EXISTS gymnasts (
   id INT NOT NULL AUTO_INCREMENT COMMENT 'Gymnast\` code',
-  name VARCHAR(45) NOT NULL COMMENT 'Gymnast\` name',
+  first_name VARCHAR(45) NOT NULL COMMENT 'Gymnast\` first name',
+  last_name VARCHAR(45) NOT NULL COMMENT 'Gymnast\` last name',
   birth_date DATE NOT NULL COMMENT 'Gymnast\` birth date',
   life_time_score INT NOT NULL DEFAULT 0 COMMENT 'Score gather by an gymnast since is member of a gym.',
   current_streak_points INT NOT NULL DEFAULT 0 COMMENT 'Amount of points adquired by a Gymnas for loging everyday, is reset after 1 day of not loging.',
@@ -99,6 +100,7 @@ CREATE TABLE IF NOT EXISTS gymnasts (
   about MEDIUMTEXT NULL DEFAULT NULL COMMENT 'Decription of the gymnast\n',
   created DATE NOT NULL,
   updated DATE NOT NULL,
+  deleted_at timestamp NULL DEFAULT NULL,
   gyms_has_users_gyms_id bigint NOT NULL,
   gyms_has_users_users_id INT NOT NULL,
   PRIMARY KEY (id),
