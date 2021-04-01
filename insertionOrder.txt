@@ -19,7 +19,7 @@ subscriptions
 model_has_permissions
 model_has_roles
 gymnast_has_skills
-gymnasts_classes
+gymnasts_has_classes
 payments
 skill_lists_has_skills
 completed_normal_challenges

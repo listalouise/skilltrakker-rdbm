@@ -292,11 +292,11 @@ ENGINE = InnoDB
 COMMENT = 'Table that stores SKILLS that a GYMNAST get.';
 
 -- -----------------------------------------------------
--- Table gymnasts_classes
+-- Table gymnasts_has_classes
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS gymnasts_classes ;
+DROP TABLE IF EXISTS gymnasts_has_classes ;
 
-CREATE TABLE IF NOT EXISTS gymnasts_classes (
+CREATE TABLE IF NOT EXISTS gymnasts_has_classes (
   gymnasts_id INT NOT NULL COMMENT 'Foreing key from GYMNASTS table',
   classes_id bigint NOT NULL COMMENT 'Foreing key from CLASSES table',
   PRIMARY KEY (gymnasts_id, classes_id),
@@ -574,7 +574,7 @@ ADD CONSTRAINT fk_skills_is_mastered_by_gymnast
     ON DELETE NO ACTION
     ON UPDATE NO ACTION;
 
-ALTER TABLE gymnasts_classes
+ALTER TABLE gymnasts_has_classes
 ADD CONSTRAINT fk_gymnast_has_classes
     FOREIGN KEY (gymnasts_id)
     REFERENCES gymnasts (id)

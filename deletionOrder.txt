@@ -3,7 +3,7 @@ completed_daily_challenges
 completed_normal_challenges
 skill_lists_has_skills
 payments
-gymnasts_classes
+gymnasts_has_classes
 gymnast_has_skills
 model_has_roles
 model_has_permissions

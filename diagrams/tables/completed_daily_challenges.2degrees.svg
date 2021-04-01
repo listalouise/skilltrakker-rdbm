@@ -316,42 +316,42 @@
 <polygon fill="#000000" stroke="#000000" points="592.2282,-149.5972 600.8537,-151.1973 596.1141,-148.6486 600,-147.7 600,-147.7 600,-147.7 596.1141,-148.6486 599.1463,-144.2027 592.2282,-149.5972 592.2282,-149.5972"/>
 <ellipse fill="none" stroke="#000000" cx="589.1195" cy="-150.3561" rx="3.2" ry="3.2"/>
 </g>
-<!-- gymnasts_classes -->
+<!-- gymnasts_has_classes -->
 <g id="node9" class="node">
-<title>gymnasts_classes</title>
-<g id="a_node9"><a xlink:href="../../tables/gymnasts_classes.html" xlink:title="gymnasts_classes" target="_top">
-<polygon fill="#ffffff" stroke="transparent" points="603,-38.2 603,-99.2 735,-99.2 735,-38.2 603,-38.2"/>
-<polygon fill="#f5f5f5" stroke="transparent" points="603,-75.7 603,-98.7 735,-98.7 735,-75.7 603,-75.7"/>
-<polygon fill="none" stroke="#000000" points="603,-75.7 603,-98.7 735,-98.7 735,-75.7 603,-75.7"/>
-<text text-anchor="start" x="607.5755" y="-84.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="11.00" fill="#000000">gymnasts_classes</text>
-<text text-anchor="start" x="700.5219" y="-83.8" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">[table]</text>
-<polygon fill="none" stroke="#000000" points="603,-56.7 603,-75.7 735,-75.7 735,-56.7 603,-56.7"/>
-<text text-anchor="start" x="606" y="-62.8" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">...</text>
-<polygon fill="#ffffff" stroke="transparent" points="603,-37.7 603,-56.7 654,-56.7 654,-37.7 603,-37.7"/>
-<polygon fill="none" stroke="#000000" points="603,-37.7 603,-56.7 654,-56.7 654,-37.7 603,-37.7"/>
-<text text-anchor="start" x="606" y="-43.8" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">&lt; 2</text>
-<polygon fill="#ffffff" stroke="transparent" points="654,-37.7 654,-56.7 707,-56.7 707,-37.7 654,-37.7"/>
-<polygon fill="none" stroke="#000000" points="654,-37.7 654,-56.7 707,-56.7 707,-37.7 654,-37.7"/>
-<text text-anchor="start" x="671.6105" y="-43.8" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">0 rows</text>
-<polygon fill="#ffffff" stroke="transparent" points="707,-37.7 707,-56.7 735,-56.7 735,-37.7 707,-37.7"/>
-<polygon fill="none" stroke="#000000" points="707,-37.7 707,-56.7 735,-56.7 735,-37.7 707,-37.7"/>
-<text text-anchor="start" x="725.8862" y="-43.8" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000"> &#160;</text>
+<title>gymnasts_has_classes</title>
+<g id="a_node9"><a xlink:href="../../tables/gymnasts_has_classes.html" xlink:title="gymnasts_has_classes" target="_top">
+<polygon fill="#ffffff" stroke="transparent" points="591,-38.2 591,-99.2 747,-99.2 747,-38.2 591,-38.2"/>
+<polygon fill="#f5f5f5" stroke="transparent" points="591,-75.7 591,-98.7 747,-98.7 747,-75.7 591,-75.7"/>
+<polygon fill="none" stroke="#000000" points="591,-75.7 591,-98.7 747,-98.7 747,-75.7 591,-75.7"/>
+<text text-anchor="start" x="595.6531" y="-84.8" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="11.00" fill="#000000">gymnasts_has_classes</text>
+<text text-anchor="start" x="712.5219" y="-83.8" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">[table]</text>
+<polygon fill="none" stroke="#000000" points="591,-56.7 591,-75.7 747,-75.7 747,-56.7 591,-56.7"/>
+<text text-anchor="start" x="594" y="-62.8" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">...</text>
+<polygon fill="#ffffff" stroke="transparent" points="591,-37.7 591,-56.7 654,-56.7 654,-37.7 591,-37.7"/>
+<polygon fill="none" stroke="#000000" points="591,-37.7 591,-56.7 654,-56.7 654,-37.7 591,-37.7"/>
+<text text-anchor="start" x="594" y="-43.8" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">&lt; 2</text>
+<polygon fill="#ffffff" stroke="transparent" points="654,-37.7 654,-56.7 713,-56.7 713,-37.7 654,-37.7"/>
+<polygon fill="none" stroke="#000000" points="654,-37.7 654,-56.7 713,-56.7 713,-37.7 654,-37.7"/>
+<text text-anchor="start" x="677.6105" y="-43.8" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">0 rows</text>
+<polygon fill="#ffffff" stroke="transparent" points="713,-37.7 713,-56.7 747,-56.7 747,-37.7 713,-37.7"/>
+<polygon fill="none" stroke="#000000" points="713,-37.7 713,-56.7 747,-56.7 747,-37.7 713,-37.7"/>
+<text text-anchor="start" x="737.8862" y="-43.8" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000"> &#160;</text>
 </a>
 </g>
 </g>
-<!-- gymnasts_classes&#45;&gt;classes -->
+<!-- gymnasts_has_classes&#45;&gt;classes -->
 <g id="edge12" class="edge">
-<title>gymnasts_classes:w&#45;&gt;classes:e</title>
-<path fill="none" stroke="#000000" d="M588.5003,-65.5777C384.9943,-62.1607 276.9353,10.6078 129,-135.7 61.0762,-202.8765 183.5318,-346.7 88,-346.7"/>
-<polygon fill="#000000" stroke="#000000" points="595.0003,-65.6325 602.9696,-69.2999 599.0001,-65.6662 603,-65.7 603,-65.7 603,-65.7 599.0001,-65.6662 603.0304,-62.1001 595.0003,-65.6325 595.0003,-65.6325"/>
-<ellipse fill="none" stroke="#000000" cx="591.8004" cy="-65.6055" rx="3.2" ry="3.2"/>
+<title>gymnasts_has_classes:w&#45;&gt;classes:e</title>
+<path fill="none" stroke="#000000" d="M576.5624,-65.5785C378.3008,-62.2578 273.1989,6.9125 129,-135.7 61.0762,-202.8765 183.5318,-346.7 88,-346.7"/>
+<polygon fill="#000000" stroke="#000000" points="583.0003,-65.6326 590.9697,-69.2999 587.0001,-65.6663 591,-65.7 591,-65.7 591,-65.7 587.0001,-65.6663 591.0303,-62.1001 583.0003,-65.6326 583.0003,-65.6326"/>
+<ellipse fill="none" stroke="#000000" cx="579.8004" cy="-65.6057" rx="3.2" ry="3.2"/>
 </g>
-<!-- gymnasts_classes&#45;&gt;gymnasts -->
+<!-- gymnasts_has_classes&#45;&gt;gymnasts -->
 <g id="edge13" class="edge">
-<title>gymnasts_classes:w&#45;&gt;gymnasts:e</title>
-<path fill="none" stroke="#000000" d="M588.4463,-66.5257C560.6474,-70.0002 549.292,-84.4343 527,-109.7 496.0344,-144.7963 532.804,-206.7 486,-206.7"/>
-<polygon fill="#000000" stroke="#000000" points="595.0128,-66.1532 603.2039,-69.2942 599.0064,-65.9266 603,-65.7 603,-65.7 603,-65.7 599.0064,-65.9266 602.7961,-62.1058 595.0128,-66.1532 595.0128,-66.1532"/>
-<ellipse fill="none" stroke="#000000" cx="591.818" cy="-66.3344" rx="3.2" ry="3.2"/>
+<title>gymnasts_has_classes:w&#45;&gt;gymnasts:e</title>
+<path fill="none" stroke="#000000" d="M576.63,-66.9339C553.7412,-71.3229 545.4085,-87.1306 527,-109.7 497.4171,-145.9694 532.804,-206.7 486,-206.7"/>
+<polygon fill="#000000" stroke="#000000" points="583.0293,-66.3845 591.308,-69.2868 587.0147,-66.0422 591,-65.7 591,-65.7 591,-65.7 587.0147,-66.0422 590.692,-62.1132 583.0293,-66.3845 583.0293,-66.3845"/>
+<ellipse fill="none" stroke="#000000" cx="579.8411" cy="-66.6583" rx="3.2" ry="3.2"/>
 </g>
 </g>
 </svg>

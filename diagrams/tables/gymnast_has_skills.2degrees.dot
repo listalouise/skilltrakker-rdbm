@@ -24,7 +24,7 @@ digraph "twoDegreesRelationshipsDiagram" {
   "gymnast_has_skills":"skills_Id":w -> "skills":"id":e [arrowhead=none dir=back arrowtail=crowodot];
   "gymnasts":"gyms_has_users_gyms_id":w -> "gyms_has_users":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "gymnasts":"gyms_has_users_users_id":w -> "gyms_has_users":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
-  "gymnasts_classes":"elipses":w -> "gymnasts":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "gymnasts_has_classes":"elipses":w -> "gymnasts":"id":e [arrowhead=none dir=back arrowtail=crowodot];
   "skill_lists_has_skills":"elipses":w -> "skills":"id":e [arrowhead=none dir=back arrowtail=crowodot];
   "skills":"category_id":w -> "categories":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "skills":"event_id":w -> "events":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
@@ -103,16 +103,16 @@ digraph "twoDegreesRelationshipsDiagram" {
     target="_top"
     tooltip="gymnasts"
   ];
-  "gymnasts_classes" [
+  "gymnasts_has_classes" [
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>gymnasts_classes</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>gymnasts_has_classes</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
     </TABLE>>
-    URL="../../tables/gymnasts_classes.html"
+    URL="../../tables/gymnasts_has_classes.html"
     target="_top"
-    tooltip="gymnasts_classes"
+    tooltip="gymnasts_has_classes"
   ];
   "gyms_has_users" [
    label=<
