@@ -14,33 +14,33 @@
 <g id="node1" class="node">
 <title>challenges</title>
 <g id="a_node1"><a xlink:href="../../tables/challenges.html" xlink:title="challenges" target="_top">
-<polygon fill="#ffffff" stroke="transparent" points="404.5,-216.7 404.5,-343.7 547.5,-343.7 547.5,-216.7 404.5,-216.7"/>
-<polygon fill="#f5f5f5" stroke="transparent" points="405,-320.2 405,-343.2 548,-343.2 548,-320.2 405,-320.2"/>
-<polygon fill="none" stroke="#000000" points="405,-320.2 405,-343.2 548,-343.2 548,-320.2 405,-320.2"/>
-<text text-anchor="start" x="410" y="-329.3" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="11.00" fill="#000000">challenges</text>
-<text text-anchor="start" x="513.0437" y="-328.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">[table]</text>
-<polygon fill="none" stroke="#000000" points="405,-298.2 405,-320.2 548,-320.2 548,-298.2 405,-298.2"/>
-<image xlink:href="../../images/primaryKeys.png" width="11px" height="12px" preserveAspectRatio="xMinYMin meet" x="410" y="-315.2"/>
-<text text-anchor="start" x="425" y="-305.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">id</text>
-<polygon fill="#ffffff" stroke="transparent" points="405,-276.2 405,-298.2 548,-298.2 548,-276.2 405,-276.2"/>
-<polygon fill="none" stroke="#000000" points="405,-276.2 405,-298.2 548,-298.2 548,-276.2 405,-276.2"/>
-<image xlink:href="../../images/foreignKeys.png" width="11px" height="12px" preserveAspectRatio="xMinYMin meet" x="410" y="-293.2"/>
-<text text-anchor="start" x="425" y="-283.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">gym_id</text>
-<polygon fill="#ffffff" stroke="transparent" points="405,-254.2 405,-276.2 548,-276.2 548,-254.2 405,-254.2"/>
-<polygon fill="none" stroke="#000000" points="405,-254.2 405,-276.2 548,-276.2 548,-254.2 405,-254.2"/>
-<image xlink:href="../../images/foreignKeys.png" width="11px" height="12px" preserveAspectRatio="xMinYMin meet" x="410" y="-271.2"/>
-<text text-anchor="start" x="425" y="-261.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">class_id</text>
-<polygon fill="none" stroke="#000000" points="405,-235.2 405,-254.2 548,-254.2 548,-235.2 405,-235.2"/>
-<text text-anchor="start" x="408" y="-241.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">...</text>
-<polygon fill="#ffffff" stroke="transparent" points="405,-216.2 405,-235.2 457,-235.2 457,-216.2 405,-216.2"/>
-<polygon fill="none" stroke="#000000" points="405,-216.2 405,-235.2 457,-235.2 457,-216.2 405,-216.2"/>
-<text text-anchor="start" x="408" y="-222.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">&lt; 2</text>
-<polygon fill="#ffffff" stroke="transparent" points="457,-216.2 457,-235.2 511,-235.2 511,-216.2 457,-216.2"/>
-<polygon fill="none" stroke="#000000" points="457,-216.2 457,-235.2 511,-235.2 511,-216.2 457,-216.2"/>
-<text text-anchor="start" x="475.6105" y="-222.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">0 rows</text>
-<polygon fill="#ffffff" stroke="transparent" points="511,-216.2 511,-235.2 548,-235.2 548,-216.2 511,-216.2"/>
-<polygon fill="none" stroke="#000000" points="511,-216.2 511,-235.2 548,-235.2 548,-216.2 511,-216.2"/>
-<text text-anchor="start" x="529.4053" y="-222.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">2 &gt;</text>
+<polygon fill="#ffffff" stroke="transparent" points="426.5,-216.7 426.5,-343.7 525.5,-343.7 525.5,-216.7 426.5,-216.7"/>
+<polygon fill="#f5f5f5" stroke="transparent" points="427,-320.2 427,-343.2 526,-343.2 526,-320.2 427,-320.2"/>
+<polygon fill="none" stroke="#000000" points="427,-320.2 427,-343.2 526,-343.2 526,-320.2 427,-320.2"/>
+<text text-anchor="start" x="432" y="-329.3" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="11.00" fill="#000000">challenges</text>
+<text text-anchor="start" x="491.0437" y="-328.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">[table]</text>
+<polygon fill="none" stroke="#000000" points="427,-298.2 427,-320.2 526,-320.2 526,-298.2 427,-298.2"/>
+<image xlink:href="../../images/primaryKeys.png" width="11px" height="12px" preserveAspectRatio="xMinYMin meet" x="432" y="-315.2"/>
+<text text-anchor="start" x="447" y="-305.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">id</text>
+<polygon fill="#ffffff" stroke="transparent" points="427,-276.2 427,-298.2 526,-298.2 526,-276.2 427,-276.2"/>
+<polygon fill="none" stroke="#000000" points="427,-276.2 427,-298.2 526,-298.2 526,-276.2 427,-276.2"/>
+<image xlink:href="../../images/foreignKeys.png" width="11px" height="12px" preserveAspectRatio="xMinYMin meet" x="432" y="-293.2"/>
+<text text-anchor="start" x="447" y="-283.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">gym_id</text>
+<polygon fill="#ffffff" stroke="transparent" points="427,-254.2 427,-276.2 526,-276.2 526,-254.2 427,-254.2"/>
+<polygon fill="none" stroke="#000000" points="427,-254.2 427,-276.2 526,-276.2 526,-254.2 427,-254.2"/>
+<image xlink:href="../../images/foreignKeys.png" width="11px" height="12px" preserveAspectRatio="xMinYMin meet" x="432" y="-271.2"/>
+<text text-anchor="start" x="447" y="-261.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">class_id</text>
+<polygon fill="none" stroke="#000000" points="427,-235.2 427,-254.2 526,-254.2 526,-235.2 427,-235.2"/>
+<text text-anchor="start" x="430" y="-241.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">...</text>
+<polygon fill="#ffffff" stroke="transparent" points="427,-216.2 427,-235.2 457,-235.2 457,-216.2 427,-216.2"/>
+<polygon fill="none" stroke="#000000" points="427,-216.2 427,-235.2 457,-235.2 457,-216.2 427,-216.2"/>
+<text text-anchor="start" x="430" y="-222.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">&lt; 2</text>
+<polygon fill="#ffffff" stroke="transparent" points="457,-216.2 457,-235.2 500,-235.2 500,-216.2 457,-216.2"/>
+<polygon fill="none" stroke="#000000" points="457,-216.2 457,-235.2 500,-235.2 500,-216.2 457,-216.2"/>
+<text text-anchor="start" x="464.6105" y="-222.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">0 rows</text>
+<polygon fill="#ffffff" stroke="transparent" points="500,-216.2 500,-235.2 526,-235.2 526,-216.2 500,-216.2"/>
+<polygon fill="none" stroke="#000000" points="500,-216.2 500,-235.2 526,-235.2 526,-216.2 500,-216.2"/>
+<text text-anchor="start" x="507.4053" y="-222.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">2 &gt;</text>
 </a>
 </g>
 </g>
@@ -100,9 +100,9 @@
 <!-- challenges&#45;&gt;classes -->
 <g id="edge1" class="edge">
 <title>challenges:w&#45;&gt;classes:e</title>
-<path fill="none" stroke="#000000" d="M391.1199,-261.2591C371.1575,-247.4668 379.261,-202.2 347,-202.2"/>
-<polygon fill="#000000" stroke="#000000" points="397.3042,-263.0149 404.0167,-268.6631 401.1521,-264.1075 405,-265.2 405,-265.2 405,-265.2 401.1521,-264.1075 405.9833,-261.7369 397.3042,-263.0149 397.3042,-263.0149"/>
-<ellipse fill="none" stroke="#000000" cx="394.2259" cy="-262.1409" rx="3.2" ry="3.2"/>
+<path fill="none" stroke="#000000" d="M412.8143,-262.6523C383.4715,-250.866 386.7767,-202.2 347,-202.2"/>
+<polygon fill="#000000" stroke="#000000" points="419.126,-263.7858 426.3636,-268.7433 423.063,-264.4929 427,-265.2 427,-265.2 427,-265.2 423.063,-264.4929 427.6364,-261.6567 419.126,-263.7858 419.126,-263.7858"/>
+<ellipse fill="none" stroke="#000000" cx="415.9764" cy="-263.2201" rx="3.2" ry="3.2"/>
 </g>
 <!-- skill_lists -->
 <g id="node3" class="node">
@@ -174,9 +174,9 @@
 <!-- daily_challenges&#45;&gt;challenges -->
 <g id="edge3" class="edge">
 <title>daily_challenges:w&#45;&gt;challenges:e</title>
-<path fill="none" stroke="#000000" d="M593.9369,-325.2737C577.6855,-320.6302 570.3553,-309.2 548,-309.2"/>
-<polygon fill="#000000" stroke="#000000" points="600.5691,-326.1509 608.0279,-330.7689 604.5345,-326.6754 608.5,-327.2 608.5,-327.2 608.5,-327.2 604.5345,-326.6754 608.9721,-323.6311 600.5691,-326.1509 600.5691,-326.1509"/>
-<ellipse fill="none" stroke="#000000" cx="597.3967" cy="-325.7313" rx="3.2" ry="3.2"/>
+<path fill="none" stroke="#000000" d="M593.9314,-326.1807C568.1912,-322.3729 558.1051,-309.2 526,-309.2"/>
+<polygon fill="#000000" stroke="#000000" points="600.5195,-326.6416 608.2487,-330.7912 604.5098,-326.9208 608.5,-327.2 608.5,-327.2 608.5,-327.2 604.5098,-326.9208 608.7513,-323.6088 600.5195,-326.6416 600.5195,-326.6416"/>
+<ellipse fill="none" stroke="#000000" cx="597.3273" cy="-326.4182" rx="3.2" ry="3.2"/>
 </g>
 <!-- daily_challenges&#45;&gt;classes -->
 <g id="edge4" class="edge">
@@ -251,9 +251,9 @@
 <!-- normal_challenges&#45;&gt;challenges -->
 <g id="edge6" class="edge">
 <title>normal_challenges:w&#45;&gt;challenges:e</title>
-<path fill="none" stroke="#000000" d="M589.1098,-123.4423C530.8308,-144.6534 629.5053,-309.2 548,-309.2"/>
-<polygon fill="#000000" stroke="#000000" points="595.5954,-122.4317 604.0543,-124.7571 599.5477,-121.8159 603.5,-121.2 603.5,-121.2 603.5,-121.2 599.5477,-121.8159 602.9457,-117.6429 595.5954,-122.4317 595.5954,-122.4317"/>
-<ellipse fill="none" stroke="#000000" cx="592.4335" cy="-122.9244" rx="3.2" ry="3.2"/>
+<path fill="none" stroke="#000000" d="M589.1275,-123.1841C524.9168,-143.2764 610.9047,-309.2 526,-309.2"/>
+<polygon fill="#000000" stroke="#000000" points="595.5752,-122.2941 603.9923,-124.7662 599.5376,-121.747 603.5,-121.2 603.5,-121.2 603.5,-121.2 599.5376,-121.747 603.0077,-117.6338 595.5752,-122.2941 595.5752,-122.2941"/>
+<ellipse fill="none" stroke="#000000" cx="592.4052" cy="-122.7317" rx="3.2" ry="3.2"/>
 </g>
 <!-- normal_challenges&#45;&gt;classes -->
 <g id="edge7" class="edge">

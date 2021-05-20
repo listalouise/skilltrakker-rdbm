@@ -60,6 +60,7 @@ CREATE TABLE IF NOT EXISTS users (
   name VARCHAR(255) NOT NULL COMMENT 'user\` name',
   email VARCHAR(45) NOT NULL COMMENT 'user\` email address',
   password VARCHAR(45) NOT NULL COMMENT 'user\` password for loging into the system',
+  timezone VARCHAR(100) NULL DEFAULT '(GMT/UTC -5:00) America/Chicago',
   created_at timestamp NULL DEFAULT NULL,
   updated_at timestamp NULL DEFAULT NULL,
   deleted_at timestamp NULL DEFAULT NULL,
@@ -103,6 +104,7 @@ CREATE TABLE IF NOT EXISTS gymnasts (
   deleted_at timestamp NULL DEFAULT NULL,
   gyms_has_users_gyms_id bigint NOT NULL,
   gyms_has_users_users_id INT NOT NULL,
+  image_profile VARCHAR(100) NULL DEFAULT NULL,
   PRIMARY KEY (id),
   INDEX fk_gymnasts_gyms_has_users1_idx (gyms_has_users_gyms_id ASC, gyms_has_users_users_id ASC))
 ENGINE = InnoDB
@@ -140,8 +142,8 @@ CREATE TABLE IF NOT EXISTS challenges (
   points INT NULL DEFAULT NULL,
   gym_id bigint NOT NULL COMMENT 'Code of the Gym',
   class_id bigint NULL DEFAULT NULL COMMENT 'Code of the Class',
-  is_daily BOOLEAN NULL DEFAULT 0,
-  daily_expiration_date date NULL DEFAULT NULL,
+  is_featured BOOLEAN NULL DEFAULT 0,
+  featured_date date NULL DEFAULT NULL,
   created_at timestamp NULL DEFAULT NULL,
   updated_at timestamp NULL DEFAULT NULL,
   deleted_at timestamp NULL DEFAULT NULL,
@@ -283,10 +285,11 @@ DROP TABLE IF EXISTS gymnast_has_skills ;
 CREATE TABLE IF NOT EXISTS gymnast_has_skills (
   gymnast_id INT NOT NULL COMMENT 'Gymnast\` code',
   skills_Id bigint UNSIGNED NOT NULL COMMENT 'Skill\` code',
-  progress_status VARCHAR(45) NULL COMMENT 'Tells the gymnast actual status in learning the skill',
+  progress_status INT NULL COMMENT 'Tells the gymnast actual status in learning the skill',
   coach_verify JSON NULL COMMENT 'Verification from a coach when an gymnast set the level for a skill',
-  timestamp DATE NOT NULL,
   interactions JSON NULL COMMENT 'Interactions for the skill update by others gymnasts\nHi 5\nComments\nApplasuse\nIn JSON Format',
+  created_at timestamp NULL DEFAULT NULL,
+  updated_at timestamp NULL DEFAULT NULL,
   PRIMARY KEY (gymnast_id, skills_Id),
   INDEX fk_gymnast_has_skills_idx (skills_Id ASC),
   INDEX fk_skills_is_mastered_by_gymnast_idx (gymnast_id ASC))

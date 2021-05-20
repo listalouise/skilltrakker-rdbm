@@ -28,8 +28,8 @@
          <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="class_id" nullable="true" remarks="Code of the Class" size="19" type="BIGINT" typeCode="-5">
             <parent catalog="skilltrakker_api" column="id" foreignKey="fk_challenges_class1_idx" implied="false" onDeleteCascade="false" table="classes"/>
          </column>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="6" name="is_daily" nullable="true" remarks="" size="1" type="BIT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="daily_expiration_date" nullable="true" remarks="" size="10" type="DATE" typeCode="91"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="6" name="is_featured" nullable="true" remarks="" size="1" type="BIT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="featured_date" nullable="true" remarks="" size="10" type="DATE" typeCode="91"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="created_at" nullable="true" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="updated_at" nullable="true" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="deleted_at" nullable="true" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
@@ -183,10 +183,11 @@
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="skills_Id" nullable="false" remarks="Skill` code" size="20" type="BIGINT UNSIGNED" typeCode="-5">
             <parent catalog="skilltrakker_api" column="id" foreignKey="fk_skills_is_mastered_by_gymnast" implied="false" onDeleteCascade="false" table="skills"/>
          </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="progress_status" nullable="true" remarks="Tells the gymnast actual status in learning the skill" size="45" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="progress_status" nullable="true" remarks="Tells the gymnast actual status in learning the skill" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="coach_verify" nullable="true" remarks="Verification from a coach when an gymnast set the level for a skill" size="1073741824" type="JSON" typeCode="-1"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="timestamp" nullable="false" remarks="" size="10" type="DATE" typeCode="91"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="interactions" nullable="true" remarks="Interactions for the skill update by others gymnasts&#10;Hi 5&#10;Comments&#10;Applasuse&#10;In JSON Format" size="1073741824" type="JSON" typeCode="-1"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="interactions" nullable="true" remarks="Interactions for the skill update by others gymnasts&#10;Hi 5&#10;Comments&#10;Applasuse&#10;In JSON Format" size="1073741824" type="JSON" typeCode="-1"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="created_at" nullable="true" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="updated_at" nullable="true" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
          <primaryKey column="gymnast_id" sequenceNumberInPK="1"/>
          <primaryKey column="skills_Id" sequenceNumberInPK="2"/>
          <index name="PRIMARY" unique="true">
@@ -223,6 +224,7 @@
          <column autoUpdated="false" defaultValue="null" digits="0" id="12" name="gyms_has_users_users_id" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <parent catalog="skilltrakker_api" column="user_id" foreignKey="fk_gymnasts_gyms_has_users1" implied="false" onDeleteCascade="false" table="gyms_has_users"/>
          </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="13" name="image_profile" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="PRIMARY" unique="true">
             <column ascending="true" name="id"/>
@@ -564,9 +566,10 @@
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="user` name" size="255" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="email" nullable="false" remarks="user` email address" size="45" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="password" nullable="false" remarks="user` password for loging into the system" size="45" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="created_at" nullable="true" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="updated_at" nullable="true" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="deleted_at" nullable="true" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="(GMT/UTC -5:00) America/Chicago" digits="0" id="4" name="timezone" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="created_at" nullable="true" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="updated_at" nullable="true" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="deleted_at" nullable="true" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="PRIMARY" unique="true">
             <column ascending="true" name="id"/>
