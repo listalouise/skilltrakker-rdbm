@@ -23,7 +23,7 @@
 <image xlink:href="../../images/primaryKeys.png" width="11px" height="12px" preserveAspectRatio="xMinYMin meet" x="238" y="-243.7"/>
 <text text-anchor="start" x="253" y="-233.8" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">gymnast_id</text>
 <polygon fill="none" stroke="#000000" points="367,-226.7 367,-248.7 465,-248.7 465,-226.7 367,-226.7"/>
-<text text-anchor="start" x="370" y="-234.4" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">int[10]</text>
+<text text-anchor="start" x="370" y="-234.4" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">bigint[19]</text>
 <polygon fill="none" stroke="#000000" points="233,-204.7 233,-226.7 367,-226.7 367,-204.7 233,-204.7"/>
 <image xlink:href="../../images/primaryKeys.png" width="11px" height="12px" preserveAspectRatio="xMinYMin meet" x="238" y="-221.7"/>
 <text text-anchor="start" x="253" y="-211.8" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">skills_Id</text>
@@ -92,7 +92,7 @@
 <text text-anchor="start" x="101.6105" y="-213.8" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">0 rows</text>
 <polygon fill="#ffffff" stroke="transparent" points="137,-207.7 137,-226.7 182,-226.7 182,-207.7 137,-207.7"/>
 <polygon fill="none" stroke="#000000" points="137,-207.7 137,-226.7 182,-226.7 182,-207.7 137,-207.7"/>
-<text text-anchor="start" x="163.4053" y="-213.8" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">4 &gt;</text>
+<text text-anchor="start" x="163.4053" y="-213.8" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#000000">3 &gt;</text>
 </a>
 </g>
 </g>
