@@ -118,9 +118,8 @@
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="progress_status" nullable="true" remarks="Tells the gymnast actual status in learning the skill" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="coach_verify" nullable="true" remarks="Verification from a coach when an gymnast set the level for a skill" size="1073741824" type="JSON" typeCode="-1"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="interactions" nullable="true" remarks="Interactions for the skill update by others gymnasts&#10;Hi 5&#10;Comments&#10;Applasuse&#10;In JSON Format" size="1073741824" type="JSON" typeCode="-1"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="created_at" nullable="true" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="updated_at" nullable="true" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="created_at" nullable="true" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="updated_at" nullable="true" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
          <primaryKey column="gymnast_id" sequenceNumberInPK="1"/>
          <primaryKey column="skills_Id" sequenceNumberInPK="2"/>
          <index name="PRIMARY" unique="true">
