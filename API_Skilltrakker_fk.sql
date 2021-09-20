@@ -129,6 +129,23 @@ CREATE TABLE IF NOT EXISTS classes (
 ENGINE = InnoDB
 COMMENT = 'Table that stores CLASSES\` information';
 
+-- -----------------------------------------------------
+-- Table iNTERACTIONS
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS interactions ;
+
+CREATE TABLE IF NOT EXISTS interactions (
+  id bigint NOT NULL AUTO_INCREMENT,
+  name VARCHAR(45) NOT NULL,
+  icon VARCHAR(255) NULL DEFAULT NULL,
+  is_comment BOOLEAN NULL DEFAULT 1,
+  created_at timestamp NULL DEFAULT NULL,
+  updated_at timestamp NULL DEFAULT NULL,
+  deleted_at timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (id))
+ENGINE = InnoDB
+COMMENT = 'Table that storesINTERACTIONS\` information';
+
 
 -- -----------------------------------------------------
 -- Table challenges

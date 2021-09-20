@@ -21,4 +21,5 @@ gymnast_has_skills
 gymnasts_has_classes
 payments
 skill_lists_has_skills
+interactions
 password_resets
